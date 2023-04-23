@@ -91,9 +91,9 @@ def alter_image(in_filename, out_filename, thresh = 100, background_path = "./Im
     img_aa2 = np.where(mask!=0,blur2,(img_rgb / 255).astype(dtype='float32'))
     img_aa3 = np.where(mask!=0,blur3,(img_rgb / 255).astype(dtype='float32'))
 
-    cv2.imwrite(f"{out_filepath_no_extension}_final.bmp", (img_aa1 * 255).astype(dtype='uint8'))
-    cv2.imwrite(f"{out_filepath_no_extension}_final.bmp", (img_aa2 * 255).astype(dtype='uint8'))
-    cv2.imwrite(f"{out_filepath_no_extension}_final.bmp", (img_aa3 * 255).astype(dtype='uint8'))
+    cv2.imwrite(f"{out_filepath_no_extension}_final1.bmp", (img_aa1 * 255).astype(dtype='uint8'))
+    cv2.imwrite(f"{out_filepath_no_extension}_final2.bmp", (img_aa2 * 255).astype(dtype='uint8'))
+    cv2.imwrite(f"{out_filepath_no_extension}_final3.bmp", (img_aa3 * 255).astype(dtype='uint8'))
 
 
 alter_image("./Imagens/corvo.bmp", "corvo", 210)
